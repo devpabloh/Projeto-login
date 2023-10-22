@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-queries.css">
 </head>
@@ -16,8 +18,20 @@
             <div id="formulario">
                 <H1>Login</H1>
                 <P>Seja bem-vindo(a) novamente. Faça o login para acessar sua conta e poder fazer as configurações no seu ambiente.</P>
-                <form action="login.php" method="post">
-
+                <form action="login.php" method="post" autocomplete="on">
+                    <div class="campo">
+                            <i class="material-symbols-outlined">person</i>
+                            <input type="text" name="login" id="ilogin" placeholder="Seu e-mail"  maxlength="50" required autocomplete="email">
+                            <label for="ilogin"> Login</label>
+                    </div>
+                    <div class="campo">
+                            <i class="material-symbols-outlined">
+                                lock_person</i>
+                            <input type="text" name="senha" id="isenha" placeholder="Sua senha" required minlength="0" maxlength="10" autocomplete="current-password">
+                            <label for="isenha">Senha</label>
+                    </div>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="limpar">
                 </form>
             </div>
         </section>
